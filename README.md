@@ -17,6 +17,12 @@ SSH to your ProxMox server as a privileged user and run...
 bash -c "$(wget --no-cache -qLO - https://raw.githubusercontent.com/noofny/proxmox_plex/master/setup.sh)"
 ```
 
+## External/USB Media
+
+You can use this pretty erasilly, once you have [attached and mounted}(https://www.techrepublic.com/article/how-to-properly-automount-a-drive-in-ubuntu-linux/) it on the host. Say your Plex container ID is `1234` and you mounted the drive on your ProxMox host at `/media/my_media`...
+- SSH to ProxMox and run `pct set 1234 -mp0 /media/my_media,mp=/mnt/my_media,backup=0`
+- SSH to your Plex box and you should see this mounted at `/mnt/my_media`
+
 ## Inspiration
 
 - [Install Plex or Jellyfin with Hardware Acceleration inside a LXC container on Proxmox](https://ashu.io/blog/media-server-lxc-proxmox/)
