@@ -1,7 +1,7 @@
 # Plex on ProxMox
 
 <p align="center">
-    <img height="200" alt="Plex Logo" src="img/logo_plex.png">
+    <img height="200" alt="Plex Logo" src="img/logo_plex.jpg">
     <img height="200" alt="ProxMox Logo" src="img/logo_proxmox.png">
 </p>
 
