@@ -27,3 +27,4 @@ You can use this pretty erasilly, once you have [attached and mounted}(https://w
 
 - [Install Plex or Jellyfin with Hardware Acceleration inside a LXC container on Proxmox](https://ashu.io/blog/media-server-lxc-proxmox/)
 - [Best Practices for running Plex on Proxmox?](https://www.reddit.com/r/Proxmox/comments/f8bdv5/best_practices_for_running_plex_on_proxmox/)
+
