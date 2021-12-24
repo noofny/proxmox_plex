@@ -34,7 +34,6 @@ apt update && apt install -y \
     wget \
     htop \
     net-tools \
-    cifs-utils \
     gnupg2
 
 

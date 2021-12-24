@@ -72,11 +72,10 @@ info "Using '$STORAGE' for storage location."
 
 
 # Create the container
-# TODO: specify root disk size!
-info "Creating Privileged LXC container..."
+info "Creating LXC container..."
 pct create "${CONTAINER_ID}" "${TEMPLATE_STRING}" \
     -arch "${CONTAINER_ARCH}" \
-    -cores 4 \
+    -cores 2 \
     -memory 2048 \
     -swap 2048 \
     -onboot 1 \
