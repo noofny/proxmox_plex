@@ -26,11 +26,14 @@ DEFAULT_HOSTNAME='plex'
 DEFAULT_PASSWORD='plexadmin'
 DEFAULT_IPV4_CIDR='192.168.0.10/24'
 DEFAULT_IPV4_GW='192.168.0.1'
+DEFAULT_CONTAINER_ID=$(pvesh get /cluster/nextid)
 read -p "Enter a hostname (${DEFAULT_HOSTNAME}) : " HOSTNAME
 read -s -p "Enter a password (${DEFAULT_PASSWORD}) : " HOSTPASS
 echo -e "\n"
 read -p "Enter an IPv4 CIDR (${DEFAULT_IPV4_CIDR}) : " HOST_IP4_CIDR
 read -p "Enter an IPv4 Gateway (${DEFAULT_IPV4_GW}) : " HOST_IP4_GATEWAY
+read -p "Enter a container ID (${DEFAULT_CONTAINER_ID}) : " CONTAINER_ID
+info "Using ContainerID: ${CONTAINER_ID}"
 HOSTNAME="${HOSTNAME:-${DEFAULT_HOSTNAME}}"
 HOSTPASS="${HOSTPASS:-${DEFAULT_PASSWORD}}"
 HOST_IP4_CIDR="${HOST_IP4_CIDR:-${DEFAULT_IPV4_CIDR}}"
@@ -66,11 +69,6 @@ else
     done
 fi
 info "Using '$STORAGE' for storage location."
-
-
-# Get the next guest VM/LXC ID
-CONTAINER_ID=$(pvesh get /cluster/nextid)
-info "Container ID is $CONTAINER_ID."
 
 
 # Create the container
