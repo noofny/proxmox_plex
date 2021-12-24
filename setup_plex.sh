@@ -38,6 +38,8 @@ echo "Installing Plex..."
 echo deb https://downloads.plex.tv/repo/deb public main | tee /etc/apt/sources.list.d/plexmediaserver.list
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | apt-key add -
 apt update && apt install -y plexmediaserver
+mkdir /mnt/plex  # mp0: /mnt/plex,mp=/mnt/plex,backup=0
+
 
 
 echo "Setup complete - you can access the console at http://$(hostname -I):32400/web"
