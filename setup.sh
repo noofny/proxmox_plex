@@ -101,6 +101,11 @@ echo "lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional
 info "Starting LXC container..."
 pct start "${CONTAINER_ID}"
 sleep 5
+CONTAINER_STATUS=$(pct status $CONTAINER_ID)
+if [ ${CONTAINER_STATUS} != "status: running" ]; then
+    error "Container ${CONTAINER_ID} is not running! status=${CONTAINER_STATUS}"
+    exit 1
+fi
 
 
 # Setup OS
