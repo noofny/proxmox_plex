@@ -23,6 +23,10 @@ You can use this pretty erasilly, once you have [attached and mounted}(https://w
 - SSH to ProxMox and run `pct set 1234 -mp0 /media/my_media,mp=/mnt/my_media,backup=0`
 - SSH to your Plex box and you should see this mounted at `/mnt/my_media`
 
+## Upgrading Plex
+
+Follow [this guide](https://support.plex.tv/articles/235974187-enable-repository-updating-for-supported-linux-server-distributions/) to add repo and then just run `apt update && apt upgrade`.
+
 ## Inspiration
 
 - [Install Plex or Jellyfin with Hardware Acceleration inside a LXC container on Proxmox](https://ashu.io/blog/media-server-lxc-proxmox/)
